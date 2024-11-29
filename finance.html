@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion Financière</title>
+  <link rel="stylesheet" href="finance.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+  <div class="conteneur">
+    <h2>Gestion Financière</h2>
+    <div class="groupe-formulaire">
+      <label for="salaireMensuel">Salaire mensuel (€)</label>
+      <input type="number" id="salaireMensuel" placeholder="Ex: 2000" required>
+    </div>
+    <div class="groupe-formulaire">
+      <label for="salaireAnnuel">Salaire annuel (€) (optionnel)</label>
+      <input type="number" id="salaireAnnuel" placeholder="Ex: 24000">
+    </div>
+    <div class="groupe-formulaire">
+      <label for="depenses">Dépenses (€)</label>
+      <input type="number" id="loyer" placeholder="Loyer" required>
+      <input type="number" id="nourriture" placeholder="Nourriture" required>
+      <input type="number" id="factures" placeholder="Factures (électricité, eau...)" required>
+      <input type="number" id="transport" placeholder="Transport" required>
+      <input type="number" id="abonnements" placeholder="Abonnements (Club Sport, Netflix, Spotify...)" required>
+      <input type="number" id="sorties" placeholder="Sorties" required>
+      <input type="number" id="voyages" placeholder="Voyages" required>
+      <input type="number" id="argentDePoche" placeholder="Argent de poche" required>
+      <input type="number" id="autres" placeholder="Autres dépenses" required>
+    </div>
+    <button onclick="afficherSituationFinanciere()">Voir ma situation financière</button>
+    <div id="conteneur-cercle">
+      <canvas id="cercleFinancier" width="400" height="400"></canvas>
+      <p id="remarques"></p>
+    </div>
+    <button onclick="proposerPlanFinancier()">Proposer une gestion financière</button>
+    <p id="suggestions"></p>
+  </div>
+  <script src="finance.js"></script>
+</body>
+</html>
